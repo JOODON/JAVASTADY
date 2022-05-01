@@ -1,9 +1,9 @@
 public class extendStady {
     public static void main(String[]args){
         Wizard wizard=new Wizard("해리포터",100,100);
-        Wizard.toString();
+        System.out.println(wizard.toString());
         Novice novice=new Novice("전사",10);
-        Novice.toString();
+        System.out.println(novice.toString());
     }
 }
 class Novice{
@@ -13,8 +13,9 @@ public Novice(String name,int hp){
     this.name=name;
     this.hp=hp;
 }
+//toString
 public String toString(){
-    return String.format("%s(HP:%d)",this.name,this.hp);
+    return String.format("%s(HP: %d)",this.name,this.hp);
  }
 }
 class Wizard extends Novice{
